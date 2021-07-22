@@ -11,7 +11,7 @@ namespace Task2
     public class Program
     {
         readonly Saka root;
-        public int depth;
+        public int Depth { get; private set; }
 
         public Program(int[] data)
         {
@@ -21,8 +21,8 @@ namespace Task2
             root = new Saka();
             io.CreateTree(root, data);
             
-            depth = algo.FindDepth(root);
-            io.OutputTreeDepth(depth);
+            Depth = algo.FindDepth(root);
+            io.OutputTreeDepth(Depth);
         }
 
         static void Main(string[] args)
